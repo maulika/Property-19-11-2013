@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>My Account</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+	    <link href="css/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/myStyle.css" rel="stylesheet" type="text/css"/>
+
+<script>
+	function init(){
+		onAppResize();
+	}
+	
+	function onAppResize(){
+		var headerH = $('#headerDiv').height();
+		if(headerH == 0){
+			headerH = 50;
+		}
+		
+		var appHeight = window.innerHeight;
+		var contentH = appHeight-(headerH)-5;	
+		document.getElementById('contentDiv').style.height = contentH+'px';
+	}
+</script>
+</head> 
+<body onResize="onAppResize()" onLoad="init()"> 
+	<div data-role="page" id="page" style="height:auto;" class="myContentBG">
+        <!--Header Start-->
+        <div id="headerDiv" data-role="header" class="myHeaderBG">
+           <a style="visibility:hidden;"></a>
+            <h1 class="headerTitle">My Account</h1>
+            <a href="#" onClick="document.location.href='login_screen.html';" class="lightblueBtn">Log Out</a>
+			<img src="images/other/settingIcon.png" class="leftHeader" onClick="document.location.href='quick_panel_out.html';"/>
+        </div>
+        <!--Header End-->
+        
+        <!--Content Start-->
+        <div data-role="content"  id="contentDiv" class="">	
+			<div class="all-grey-btns">
+				<img src="images/other/my-profile.png" width="300" height="51" alt="" 
+                onClick="document.location.href='my-profile.html';"/><br />
+				<img src="images/other/my-listing.png" width="300" height="51" alt="" class="my-listing-img"  onClick="document.location.href='my-listings_2.html';"/><br />
+				<img src="images/other/my-fav.png" width="300" height="51" alt="" 
+                onClick="document.location.href='my-favorites_2.html';"/><br />
+				<img src="images/other/my-saved-search.png" width="300" height="51" alt=""  onClick="document.location.href='my-saved-search_2.html';"/><br />
+				<img src="images/other/my-inbox.png" width="300" height="51" alt=""  
+                onClick="document.location.href='my-msgs_2.html';"/><br />
+				<img src="images/other/post-ad.png" width="300" height="51" alt="" 
+                onClick="document.location.href='advert1.html';"/><br /><br /><br /><br />
+				<img src="images/other/edit-profile.png" width="300" height="51" alt="" 
+                onClick="document.location.href='edit_profile.html';"/>
+			</div>
+        </div>
+        <!--Content End-->
+   </div> 
+</body>
+</html>

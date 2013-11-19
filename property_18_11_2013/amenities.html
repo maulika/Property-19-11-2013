@@ -1,0 +1,133 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>amenities</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+	    <link href="css/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/myStyle.css" rel="stylesheet" type="text/css"/>
+
+<script>
+	function init(){
+		onAppResize();
+	}
+	
+	function onAppResize(){
+		var headerH = document.getElementById('headerDiv').style.height;
+		//var footerH = document.getElementById('footerDiv').style.height;
+		headerH = $('#headerDiv').height();
+		//footerH = $('#footerDiv').height();
+	
+		if(headerH == 0){
+			headerH = 50;
+			//footerH = 45;
+		}
+		
+		var appHeight = window.innerHeight;
+		var contentH = appHeight-(headerH)-45;
+	
+		document.getElementById('contentDiv').style.height = contentH+'px';
+	}
+</script>
+</head> 
+<body onResize="onAppResize()" onLoad="init()"> 
+<div data-role="page" id="page" style="height:auto;" class="myContentBG">
+        <!--Header Start-->
+        <div id="headerDiv" data-role="header" class="myHeaderBG">
+            <a href="#" onClick="document.location.href='search_results.html';" class="backBtn">Back</a>
+            <h1 class="headerTitle">Large Spacious 2...</h1>
+            <a href="#" class="greystarBtn"></a>
+        </div>
+        <!--Header End-->
+        <!--Content Start-->
+        <div data-role="content"  id="contentDiv">	
+            
+            <div class="tab_button" style="width:100%;padding-bottom:20px;"> 
+            <ul style="width:100%;margin:0;padding:0;">
+            <li  class="tab_sky"><a href="#" style="color:#FFF;text-decoration:none;font-weight:normal;font-size:12px;" onClick="document.location.href='description.html';">Description</a></li>
+            <li class="tab_sky"><a href="#" style="color:#FFF;text-decoration:none;font-weight:normal;font-size:12px;" onClick="document.location.href='indetails.html';">Details</a></li>
+            <li class="tab_blue"><a href="#" style="color:#FFF;text-decoration:none;font-weight:normal;font-size:12px;" onClick="document.location.href='amenities.html';">Amenities</a></li>
+            </ul>
+            </div>
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/green-tick.png"/> &nbsp; Furnished
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/close.png" width="50" height="45" style="margin-left: -10px;
+    margin-top: -5px;"/> &nbsp; Parking
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/green-tick.png"/> &nbsp; Garage
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/close.png" width="50" height="45" style="margin-left: -10px;
+    margin-top: -5px;"/> &nbsp; Internet
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/green-tick.png"/> &nbsp; Wireless
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/green-tick.png"/> &nbsp; Garden/Terrace
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/green-tick.png"/> &nbsp; Satellite/Cable
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/green-tick.png"/> &nbsp; Pets
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/green-tick.png"/> &nbsp; Working Tenant
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/close.png" width="50" height="45" style="margin-left: -10px;
+    margin-top: -5px;"/> &nbsp; Student
+</div>
+</p>
+
+<p>
+<div class="amenities_input">
+<img class="left_status_symbol" src="images/other/close.png" width="50" height="45" style="margin-left: -10px;
+    margin-top: -5px;"/> &nbsp; DSS
+</div>
+</p>
+
+
+
+
+
+        </div>
+        <!--Content End-->
+        </div>
+</body>
+</html>
